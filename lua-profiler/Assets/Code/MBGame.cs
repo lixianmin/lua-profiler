@@ -14,25 +14,9 @@ namespace Client
 {
     public class MBGame : LuaClient
     {
-        protected override void OnLoadFinished ()
-        {
-            base.OnLoadFinished();
-//            _luaUpdateFunction = luaState.GetFunction("Update");
-        }
-
-        private void Update ()
-        {
-            if (null != _luaUpdateFunction)
-            {
-//                _luaUpdateFunction.Call();
-            }
-        }
-
         public static IntPtr GetLuaStatePtr ()
         {
             return Instance._GetLuaStatePtr ();
         }
-
-        private static LuaFunction _luaUpdateFunction;
     }
 }
