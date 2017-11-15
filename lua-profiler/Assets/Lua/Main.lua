@@ -1,13 +1,25 @@
 --主入口函数。从这里开始lua逻辑
-function Main()					
-	print("logic start")	 		
+
+function TestUpdate1 ()
+    -- print ('Test Update1')
 end
 
---场景切换通知
-function OnLevelWasLoaded(level)
-	collectgarbage("collect")
-	Time.timeSinceLevelLoad = 0
+function TestUpdate2 ()
+    -- print ('Test Update2')
 end
 
-function OnApplicationQuit()
+function Update ()
+    TestUpdate1 ()
+    TestUpdate2 ()
 end
+
+function Main ()
+	print("logic start")
+    UpdateBeat:Add (Update, self)
+end
+
+function OnApplicationQuit ()
+
+end
+
+

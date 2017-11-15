@@ -258,4 +258,9 @@ public class LuaClient : MonoBehaviour
     {
         return loop;
     }
+
+    internal IntPtr _GetLuaStatePtr ()
+    {
+        return luaState.L;
+    }
 }
