@@ -61,7 +61,7 @@ namespace Lua.Menus
                             _ignore_count = _ignore_count + 1
                         end
                     end
-                elseif event == 'return' then
+                elseif event == 'return' or event == 'tail return' then
                     if _ignore_count == 0 then
                         ClientProfiler.EndSample ()
                     else
